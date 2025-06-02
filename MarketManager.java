@@ -22,7 +22,7 @@ public class MarketManager {
                 break;
             }
         }
-        if (!exists) { // sinon on peut afficher un message pour dire que ça n'a pas été ajouté
+        if (!exists) {
             items.add(item);
         }
     }
@@ -49,7 +49,7 @@ public class MarketManager {
                 break;
             }
         }
-        if (!exists) { // sinon on peut afficher un message pour dire que ça n'a pas été ajouté
+        if (!exists) {
             location.add(destination);
         }
     }
