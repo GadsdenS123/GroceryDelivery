@@ -53,4 +53,14 @@ public class MarketManager {
             location.add(destination);
         }
     }
+
+    public void saveLocationToTextFile(String fileName) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+            for (Location destination : location) {
+                writer.println(destination.getLocation());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

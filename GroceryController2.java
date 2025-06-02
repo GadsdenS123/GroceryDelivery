@@ -44,7 +44,7 @@ public class GroceryController2 implements Initializable {
 
     public void Save2()
     {
-        marketManager.saveItemsToTextFile("cars.txt");
+        marketManager.saveItemsToTextFile("items.txt");
     }
 
     @FXML
@@ -65,11 +65,17 @@ public class GroceryController2 implements Initializable {
         btnAdd.setDisable(false);
     }
 
+    public void Save3()
+    {
+        marketManager.saveLocationToTextFile("location.txt");
+    }
+
     @FXML
     void AddLocation()
     {
         String location = txtLocation.getText();
         Location tmplocation = new Location(location);
         marketManager.addLocation(tmplocation);
+        Save3();
     }
 }
