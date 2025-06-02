@@ -53,12 +53,11 @@ public class GroceryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
-    {
-
-    }
+    { }
 
     @FXML
-    void SignUp() {
+    void SignUp()
+    {
         String username = txtSignUp.getText();
         String password = passSignUp.getText();
         GroceryDeliveryAccount tmpAccount = new GroceryDeliveryAccount(username, password);
@@ -66,12 +65,14 @@ public class GroceryController implements Initializable {
         Save();
     }
 
-    public void Save() {
+    public void Save()
+    {
         accountManager.saveAccountToTextFile("account.txt");
     }
 
     @FXML
-    void Login() {
+    void Login()
+    {
         String accountList = accountManager.accessAccountfromTextFile("account.txt");
         String loginInformation = txtLogin + "," + passLogin;
 
